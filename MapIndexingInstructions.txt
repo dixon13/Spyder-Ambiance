@@ -1,0 +1,14 @@
+SpyderAmbiance autodetects certain running mods and maps in order to try and find civilians that match the maps terrain.
+
+1. In order to add support for a map, start a blank mission in the editor on that map.
+2. Once ingame, hit escape to pause the game.
+3. In the debug console, type: copyToClipboard str worldName
+4. This will copy the map's config name to your clipboard (ctrl-v to paste)
+5. Open up the "SpyderAmbiance" folder, then open up the "getUnitTypes.sqf" file
+6. On lines 32-35, there are arrays with map names inside of them.
+7. Add the map name that was copied in step 3/4 to the appropriate array. Make sure to separate map names with commas as show in the arrays already. For example, if the map
+name copied in steps 3/4 was "testmapname", and it was a middle eastern styled map, then you would change the _middleEasternMaps array to the following
+_middleEastMaps = ["MCN_Aliabad","BMFayshkhabur","clafghan","fallujah","fata","hellskitchen","hellskitchens","MCN_HazarKot","praa_av","reshmaan","Shapur_BAF","Takistan","torabora","TUP_Qom","Zargabad","pja307","pja306","Mountains_ACR","tunba","Kunduz","pja308","testmapname"];
+
+Now you are done. When SpyderAmbiance is initialized on this map, it will automatically try to find civilians from mods that are of the middle eastern style.
+
