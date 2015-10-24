@@ -49,7 +49,7 @@ switch (_operation) do {
 				_objects pushBack _veh;
 				sleep .5;
 				//-- Create units
-				if (random 100 > 17) then {
+				if (random 100 > 23) then {
 					_group = createGroup civilian;
 					_unit = _group createUnit [(_civType call BIS_fnc_selectRandom), getPos _veh, [], 5, "NONE"];
 					_unit assignAsDriver _veh;
