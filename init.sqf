@@ -1,5 +1,5 @@
 //-- Initialize Spyder Ambiance
-[true, true, 30, []] execVM "SpyderAmbiance\init.sqf";
+[true, true, 30, []] call compile preprocessFileLineNumbers "SpyderAmbiance\init.sqf";
 
 /* ---------------------------
 SpyderAmbiance
