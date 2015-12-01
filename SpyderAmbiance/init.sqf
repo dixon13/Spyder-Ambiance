@@ -18,10 +18,10 @@ if (_debug) then {
 };
 
 //-- Initialize unit types
-[_debug] execVM "SpyderAmbiance\getUnitTypes.sqf";
+[_debug] call compile preprocessFileLineNumbers "SpyderAmbiance\getUnitTypes.sqf";
 
 //-- Activate loop
-[_animals,_terrorists,_delay,_blacklists,_debug] execVM "SpyderAmbiance\loopCheck.sqf";
+[_animals,_terrorists,_delay,_blacklists,_debug] call compile preprocessFileLineNumbers "SpyderAmbiance\loopCheck.sqf";
 
 //-- Debug
 if (_debug) then {
